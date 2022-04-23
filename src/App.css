@@ -1,0 +1,53 @@
+.main-layout {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.main-content {
+	flex: 1;
+	display: flex;
+	max-height: 100%;
+}
+
+.sidebar-container {
+	max-height: 100%;
+	min-width: 200px;
+	width: 15%;
+
+	margin-bottom: 90px;
+
+	overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+	.sidebar-container {
+		width: 60px;
+		min-width: auto;
+	}
+}
+
+.track-list-container {
+	flex: 1;
+	overflow-y: auto;
+	max-height: 100%;
+	margin-bottom: 90px;
+}
+
+.player {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	height: 90px;
+}
+
+.drag-track-window {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 93px;
+
+	border: 3px dashed #000;
+}

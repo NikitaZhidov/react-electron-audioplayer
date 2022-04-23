@@ -1,0 +1,143 @@
+.player-wrapper {
+	padding: 10px 30px;
+	border-top: 1px solid #f5f5f5;
+	background: #fdfdfd;
+	box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.05);
+
+	height: 90px;
+}
+
+.player-content {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	/* 80px = audio-short-info width (left-side) (150px) - volume-editor width (ridht-side) (60px) */
+	/* to centering audio track bar */
+	margin-right: 90px;
+}
+
+.play-area {
+	width: 50%;
+	display: flex;
+	margin-left: 10px;
+	margin-right: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.play-button {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0 20px;
+
+	font-size: 30px;
+}
+
+.track-timeline {
+	align-self: center;
+	width: 100%;
+}
+
+.duration {
+	margin-left: 10px;
+	margin-bottom: 8px;
+}
+
+.change-track {
+	display: flex;
+	align-items: center;
+}
+
+.change-track-icon {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.change-track-icon.disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.volume-editor {
+	width: 60px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+	position: relative;
+}
+
+.volume-slider-wrapper {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(0%, -100%);
+
+	padding: 5px 10px;
+
+	box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.05);
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.volume-slider {
+	height: 100px;
+
+	transition: opacity 0.15s ease-in-out;
+}
+
+.volume-slider-wrapper:hover {
+	opacity: 1;
+	visibility: visible;
+}
+
+.volume-editor:hover .volume-slider-wrapper {
+	opacity: 1;
+	visibility: visible;
+}
+
+.volume-value {
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
+
+.volume-value-text {
+	margin-left: 5px;
+}
+
+.no-track-message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	color: #bebebe;
+}
+
+@media (max-width: 501px) {
+	.player-audio-short-info .player-img {
+		display: none;
+	}
+
+	.player-audio-short-info {
+		align-self: center;
+		margin-right: 10px;
+	}
+
+	/* 100px - 50px (audio-short-info without image) */
+	.player-content {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 1000px) {
+	/* in small screens auto-centering is correct without margin */
+	.player-content {
+		margin-right: 0;
+	}
+}

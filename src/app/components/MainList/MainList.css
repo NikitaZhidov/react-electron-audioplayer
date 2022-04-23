@@ -1,0 +1,14 @@
+.main-list-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 90%;
+}
+
+.upload-tracks-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 20px;
+	margin-bottom: 15px;
+}

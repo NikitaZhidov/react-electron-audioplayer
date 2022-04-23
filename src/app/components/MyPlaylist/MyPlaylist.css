@@ -1,0 +1,12 @@
+.no-tracks-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+}
+
+.no-tracks-info {
+	display: flex;
+	flex-direction: column;
+}
